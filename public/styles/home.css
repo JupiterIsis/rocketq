@@ -1,0 +1,122 @@
+.content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 11.4rem 1fr;
+    grid-template-areas: 
+    'header header'
+    'left right'
+}
+
+header { 
+    grid-area: header;
+}
+
+#bg {
+    grid-area: left;
+
+    background: url('../images/home-bg-img.svg') no-repeat top/contain;
+    background-position-x: -10rem;
+    
+}
+
+main {
+    grid-area: right;
+    
+    display: flex;
+    align-items: center;
+    margin-top: -12rem;
+}
+
+main .container {
+    width: min(36.3rem, 95%);
+}
+
+main h2 {
+    font-family: Poppins, sans-serif;
+    color: var(--black);
+
+    margin-bottom: 2.4rem;
+    font-size: clamp(20px, 5vw, 2.8rem);
+}
+
+/* INPUTS AND BUTTONS */
+input, button, .button {
+    height: 5rem;
+    border-radius: .8rem;
+
+    margin-bottom: 1.8rem;
+    width: 100%;
+
+    outline: none;
+}
+
+input {
+    border: .2rem solid var(--grey-blue);
+    padding: 0 1.6rem;
+}
+
+.content header {
+    width: 80%;
+    margin: 3.5rem auto ;
+}
+
+.content header img {
+    width: 16.7rem;
+
+}
+
+.container {
+    overflow: visible;
+}
+
+/* SEPARATOR LINE */
+.separator {
+    display: flex;
+    align-items: center;
+
+}
+
+.separator div:nth-child(2){
+
+    color: var(--grey-blue);
+    font-family: "Poppins", sans-serif;
+    
+    margin: auto 1.35rem;
+    
+}
+
+.separator div:nth-child(1),
+.separator div:nth-child(3) {
+    width: 100%;
+    background-color: var(--grey-blue);
+    height: 1px;
+}
+
+
+/* BALLS */
+
+.ball{
+    
+    background-color: var(--light-blue);
+    clip-path: circle();
+
+    position: fixed;
+
+}
+
+.ball.top{
+    height: 63.3rem;
+    width: 63.3rem;
+    top: -38.5rem;
+    right: -40.4rem;
+    z-index: -1;
+
+}
+
+.ball.bottom{
+    height: 21.2rem;
+    width: 21.2rem;
+    right: 5.6rem;
+    bottom: -14.8rem;
+}
